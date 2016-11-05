@@ -7,8 +7,7 @@ var gulp = require('gulp'),
     cleanCSS  = require('gulp-clean-css'),
     importCSS = require('gulp-import-css'),
     uglify    = require('gulp-uglify'),
-    rigger    = require('gulp-rigger'),
-    babel     = require('gulp-babel');
+    rigger    = require('gulp-rigger')
 
 var paths = {
   build : {
