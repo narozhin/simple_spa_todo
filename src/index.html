@@ -4,10 +4,42 @@
   <head>
     <meta charset="utf-8">
     <title>Simple ToDo Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    
+
+    <div class="wrapper" id="app">
+      <h3>Simple ToDo Application</h3>
+      <div class="controll-wrapper">
+        <div class="input-group">
+          <input type="text" id="new-task-name" placeholder="Enter task" class="form-control" value="">
+          <span class="input-group-btn">
+            <button class="btn btn-default" id="add-task-btn" type="button">Add</button>
+          </span>
+        </div>
+      </div>
+      <div class="content">
+        <ul id="task-list"></ul>
+      </div>
+    </div>
+
+    <!-- TEMPLATES -->
+      <!-- ONE TASK TEMPLATE -->
+      <script id="tpl-task" type="text/template">
+        <span class="task-title"><%= title %></span>
+        <input type="text" class="form-control task-edit-title hide" value="">
+        <span class="task-control">
+          <button type="button" class="btn <%= complete ? 'btn-success' : 'btn-default' %> btn-xs cmplt-task">
+            complete
+          </button>
+          <button type="button" class="btn btn-danger btn-xs rm-task" >
+            remove
+          </button>
+        </span>
+      </script>
+
+    <!-- END TEMPLATES -->
     <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>

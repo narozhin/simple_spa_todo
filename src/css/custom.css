@@ -1,0 +1,43 @@
+
+.wrapper {
+  width: 960px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+#task-list {
+  max-height: 400px;
+  overflow-y: auto;
+  list-style-type: none;
+  border: 1px solid #ddd;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#task-list > li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 22px;
+  padding-right: 140px;
+  position: relative;
+}
+
+#task-list > li.complete {
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+#task-list > li:last-child {
+  border-bottom: none;
+}
+
+.controll-wrapper {
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+.task-control {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
